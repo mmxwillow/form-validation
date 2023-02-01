@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form action="highfive.html" method="get">
+    <form action="highfive.html" method="get" novalidate>
       <h1>Sign-up Form</h1>
       <div>
         <label for="email">E-mail</label>
-        <input type="email" name="email" required/>
-        <span></span>
+        <input type="email" name="email" minlength="8" required/>
+        <span class="error" aria-live="polite"></span>
       </div>
       <div>
         <label for="country">Country</label>
-        <input type="text" name="country"required/>
-        <span></span>
+        <input type="text" name="country" minlength="4" required/>
+        <span class="error" aria-live="polite"></span>
       </div>
       <div>
         <label for="zipcode">Zip-Code</label>
         <input type="text" name="zipcode"required/>
-        <span></span>
+        <span class="error" aria-live="polite"></span>
       </div>
       <div>
         <label for="password">Password</label>
-        <input type="password" name="password"required/>
-        <span></span>
+        <input type="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required/>
+        <span class="error" aria-live="polite"></span>
       </div>
       <div>
         <label for="confirm">Confirm password</label>
-        <input type="password" name="confirm"required/>
-        <span></span>
+        <input type="password" name="confirm" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required/>
+        <span class="error" aria-live="polite"></span>
       </div>
       <div>
         <input type="reset" value="Reset">

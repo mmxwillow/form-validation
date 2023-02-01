@@ -37,14 +37,29 @@ input:focus{
     outline: 1px solid white;
 }
 input:invalid{
-    outline-color: red;
+    border-color: #900;
+    outline-color: #900;
 }
 input[type="reset"]{
-    background-color:red;
+    background-color:#900;
 }
 input[type="submit"]{
     background-color:green;
 }
 .emoji{
     font-size:100px;
+}
+.error {
+    padding: 0.5rem;
+    margin-top: 0.5em;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 5px;
+  
+    box-sizing: border-box;
+}
+.error:empty{
+    padding:0;
+    margin:0;
 }
